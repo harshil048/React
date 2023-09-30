@@ -5,7 +5,7 @@ import Card from './components/Card';
 
 function App() {
 
-  const [themeMode, setThememod] = useState("light");
+  const [mode, setThememod] = useState("light");
 
   const lightTheme = ()=>{
     setThememod("light");
@@ -17,11 +17,11 @@ function App() {
 
   useEffect(()=>{
     document.querySelector('html').classList.remove("dark","light");
-    document.querySelector('html').classList.add(themeMode);
-  },[themeMode])
+    document.querySelector('html').classList.add(mode);
+  },[mode])
 
   return (
-    <ThemeProvider value={{themeMode, lightTheme, darkTheme}}>
+    <ThemeProvider value={{mode, lightTheme, darkTheme}}>
       <div className="flex flex-wrap min-h-screen items-center dark:bg-gray-900">
         <div className="w-full">
           <div className="w-full max-w-sm mx-auto flex justify-end mb-4">
