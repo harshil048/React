@@ -1,14 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
-import Layout from './components/Layout.jsx'
+import Layout from './Layout.jsx'
 import Home from './components/Home/Home.jsx'
 import About from './components/About/about.jsx'
 import Contact from './components/Contact/Contact.jsx'
 import User from './components/User/User.jsx'
 import Github, { githubInfoLoader } from './components/Github/Github.jsx'
+import MyPage from './components/MyPage/MyPage'
 
 // const router = createBrowserRouter([
 //   {
@@ -43,6 +43,7 @@ const router = createBrowserRouter(
       path='github' 
       element={<Github />} 
       />
+      <Route path="mypage" element={<MyPage />} />
     </Route>
   )
 )
